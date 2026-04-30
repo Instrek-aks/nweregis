@@ -137,7 +137,7 @@ const App = () => {
   useEffect(() => {
     fetchCounts();
     // Check if URL has admin hash
-    if (window.location.hash === '#admin') setIsAdmin(true);
+    if (window.location.hash === '#records-portal') setIsAdmin(true);
   }, []);
 
   useEffect(() => {
@@ -295,7 +295,10 @@ const App = () => {
             <a href="#gap" className="hidden-mobile" onClick={() => setMenuOpen(false)}>The Gap</a>
             <a href="#courses" className="hidden-mobile" onClick={() => setMenuOpen(false)}>Programmes</a>
             <a href="#faq" className="hidden-mobile" onClick={() => setMenuOpen(false)}>FAQ</a>
-            <a href="#admin" className="hidden-mobile" onClick={(e) => { e.preventDefault(); setIsAdmin(true); setMenuOpen(false); }}>Admin</a>
+            <a href="#records-portal" className="hidden-mobile nav-cta-secondary" onClick={(e) => { e.preventDefault(); setIsAdmin(true); setMenuOpen(false); }}>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              Admin
+            </a>
             <a href="#signup" className="nav-cta" onClick={() => setMenuOpen(false)}><span className="pulse"></span>Join Waitlist</a>
           </div>
         </div>
@@ -1003,7 +1006,7 @@ const App = () => {
               <h5>Contact</h5>
               <a href="#signup">Join Waitlist</a>
               <a href="mailto:admissions@legalolympiad.in">admissions@legalolympiad.in</a>
-              <a href="#">Schedule a call</a>
+              <a href="#records-portal" onClick={(e) => { e.preventDefault(); setIsAdmin(true); }}>Internal Portal</a>
             </div>
           </div>
           <div className="foot-btm">
@@ -1013,13 +1016,6 @@ const App = () => {
         </div>
       </footer>
 
-      {/* FLOATING ADMIN BUTTON */}
-      <div className="admin-nav hidden-mobile">
-        <button className="admin-btn" onClick={() => setIsAdmin(true)}>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          Admin Panel
-        </button>
-      </div>
     </div>
   );
 };
