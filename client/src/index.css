@@ -1116,12 +1116,31 @@ html, body {
   .nav-inner {
     padding-top: 12px;
     padding-bottom: 12px;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  @media (min-width: 400px) {
+    .nav-inner {
+      justify-content: space-between;
+    }
   }
 
   .nav-links {
-    flex-direction: column;
-    align-items: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
+
+  .logo {
+    font-size: 15px;
+  }
+  .logo-mark {
+    width: 26px;
+    height: 26px;
+  }
+
 
   .hero {
     padding: 40px 0;
