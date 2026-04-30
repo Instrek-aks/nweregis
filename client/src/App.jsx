@@ -107,7 +107,7 @@ const AdminPanel = ({ onBack }) => {
 };
 
 const App = () => {
-  const [isAdmin, setIsAdmin] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(window.location.pathname === '/admin-portal');
   const [menuOpen, setMenuOpen] = useState(false);
   const [counts, setCounts] = useState({ total: 0, litigation: 0, drafting: 0, judgment: 0, bundle: 0 });
   const [animatedCounts, setAnimatedCounts] = useState({ total: 0, litigation: 0, drafting: 0, judgment: 0 });
@@ -136,8 +136,14 @@ const App = () => {
 
   useEffect(() => {
     fetchCounts();
-    // Check if URL has admin hash
-    if (window.location.hash === '#records-portal') setIsAdmin(true);
+    // Check if URL is admin path
+    if (window.location.pathname === '/admin-portal') setIsAdmin(true);
+
+    const handlePopState = () => {
+      setIsAdmin(window.location.pathname === '/admin-portal');
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
   }, []);
 
   useEffect(() => {
@@ -267,7 +273,7 @@ const App = () => {
     return pricing[course][type];
   };
 
-  if (isAdmin) return <AdminPanel onBack={() => { setIsAdmin(false); window.location.hash = ''; }} />;
+  if (isAdmin) return <AdminPanel onBack={() => { setIsAdmin(false); window.history.pushState({}, '', '/'); }} />;
 
   return (
     <div className="app-root">
@@ -295,7 +301,12 @@ const App = () => {
             <a href="#gap" className="hidden-mobile" onClick={() => setMenuOpen(false)}>The Gap</a>
             <a href="#courses" className="hidden-mobile" onClick={() => setMenuOpen(false)}>Programmes</a>
             <a href="#faq" className="hidden-mobile" onClick={() => setMenuOpen(false)}>FAQ</a>
-            <a href="#records-portal" className="hidden-mobile nav-cta-secondary" onClick={(e) => { e.preventDefault(); setIsAdmin(true); setMenuOpen(false); }}>
+            <a href="/admin-portal" className="hidden-mobile nav-cta-secondary" onClick={(e) => { 
+              e.preventDefault(); 
+              window.history.pushState({}, '', '/admin-portal'); 
+              setIsAdmin(true); 
+              setMenuOpen(false); 
+            }}>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
               Admin
             </a>
@@ -1006,7 +1017,11 @@ const App = () => {
               <h5>Contact</h5>
               <a href="#signup">Join Waitlist</a>
               <a href="mailto:admissions@legalolympiad.in">admissions@legalolympiad.in</a>
-              <a href="#records-portal" onClick={(e) => { e.preventDefault(); setIsAdmin(true); }}>Internal Portal</a>
+              <a href="/admin-portal" onClick={(e) => { 
+                e.preventDefault(); 
+                window.history.pushState({}, '', '/admin-portal');
+                setIsAdmin(true); 
+              }}>Internal Portal</a>
             </div>
           </div>
           <div className="foot-btm">
