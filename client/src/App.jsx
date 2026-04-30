@@ -28,13 +28,6 @@ const AdminPanel = ({ onBack }) => {
         <div className="admin-header">
           <h1 className="admin-title">Waitlist Records</h1>
           <div style={{display:'flex', gap:'12px'}}>
-            <button className="btn-secondary" style={{color:'var(--rose)', borderColor:'var(--rose)'}} onClick={() => {
-              if (window.confirm('Are you sure you want to delete ALL student data? This cannot be undone.')) {
-                fetch(`${API_BASE}/students`, { method: 'DELETE' })
-                  .then(() => setStudents([]))
-                  .catch(err => alert('Failed to clear data: ' + err.message));
-              }
-            }}>Clear All Data</button>
             <button className="btn-secondary" onClick={onBack}>Back to Landing</button>
           </div>
         </div>
