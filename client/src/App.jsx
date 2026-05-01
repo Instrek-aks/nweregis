@@ -258,10 +258,10 @@ const App = () => {
 
   const getCoursePrice = (course, type) => {
     const pricing = {
-      litigation: { student: '₹2,999', professional: '₹4,999' },
-      drafting: { student: '₹2,499', professional: '₹3,999' },
-      judgment: { student: '₹999', professional: '₹1,799' },
-      bundle: { student: '₹4,999', professional: '₹8,999' }
+      judgment: { student: '₹999', professional: '₹1,999' },
+      litigation: { student: '₹2,999', professional: '₹3,999' },
+      drafting: { student: '₹1,499', professional: '₹2,999' },
+      bundle: { student: '₹4,999', professional: '₹7,999' }
     };
     return pricing[course][type];
   };
@@ -280,12 +280,8 @@ const App = () => {
         <div className="wrap nav-inner">
           <div className="logo">
             <div className="logo-mark">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                <path d="M12 2 L22 7 V13 C22 17 17 21 12 22 C7 21 2 17 2 13 V7 Z" stroke="white" strokeWidth="2" fill="rgba(212,160,23,.15)"/>
-                <path d="M8 12 L11 15 L16 10" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+              <img src="/logo1.png" alt="Legal Olympiad" style={{width:'100%', height:'100%', objectFit:'contain'}} />
             </div>
-            Legal <b>Olympiad</b>
           </div>
 
 
@@ -430,210 +426,11 @@ const App = () => {
             <p>Each programme targets a specific gap most law students don't realise they have, until it's their first day in chambers. Take one. Take all three. They stack.</p>
           </div>
 
-          {/* COURSE 1 */}
+          {/* COURSE 1: Judgment Appreciation */}
           <div className="course-block">
             <div className="course-block-card">
               <div className="course-hook">
                 <div className="course-numeral-big">I</div>
-                <div className="course-hook-text">
-                  <div className="fear-quote">
-                    <span className="fear-label">The unspoken thought</span>
-                    <span className="fear-text">What if I freeze the moment it's my turn to speak?</span>
-                  </div>
-                  <h3>Litigation Training Programme</h3>
-                  <div className="promise">From facts on a desk to feet in a courtroom, in five weeks.</div>
-                </div>
-                <div className="course-meta-pills">
-                  <span className="pill dur">5 Weeks</span>
-                  <span className="pill live">Live Online</span>
-                  <span className="pill hot">★ Flagship</span>
-                  <span className="pill start">Starts June 2026</span>
-                </div>
-              </div>
-              <div className="course-body-grid">
-                <div className="course-left">
-                  <div className="pitch-block">
-                    <p>This is the programme we wish we'd had before our first day in chambers. It walks you through the entire workflow of a litigating junior, the way a senior would actually teach you if they had the time. <strong>Five weeks. One real file. One end-to-end mock hearing.</strong> By the time you finish, the courtroom won't be a foreign country anymore. It'll be a place you've already worked in.</p>
-                  </div>
-                  <div className="outcomes-block">
-                    <div className="block-label">By the end, you'll be able to</div>
-                    <div className="outcomes">
-                      {[
-                        "Open a fresh case file and know exactly what goes where, without asking",
-                        "Find the binding precedent in 20 minutes, not three hours of textbook flipping",
-                        "Frame propositions of law a senior can read once and take into court",
-                        "Stand up and argue in front of a panel without your voice breaking on the first sentence"
-                      ].map((text, i) => (
-                        <div className="outcome" key={i}>
-                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="m5 12 5 5L20 7" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                          <span><strong>{text.split(' ')[0] + ' ' + text.split(' ')[1] + ' ' + text.split(' ')[2] + ' ' + text.split(' ')[3]}</strong>{text.substring(text.split(' ')[0].length + text.split(' ')[1].length + text.split(' ')[2].length + text.split(' ')[3].length + 3)}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="curriculum-block">
-                    <div className="block-label">Five-week curriculum</div>
-                    <div className="curriculum-grid">
-                      <div>Week 1: Research methodology &amp; precedent</div>
-                      <div>Week 2: File preparation &amp; case notes</div>
-                      <div>Week 3: Issue framing &amp; propositions</div>
-                      <div>Week 4: Drafting pleadings &amp; affidavits</div>
-                      <div>Week 5: Live practitioner session + mock hearing</div>
-                      <div>Capstone: End-to-end simulated case</div>
-                    </div>
-                  </div>
-                </div>
-                <div className="course-right">
-                  <div className="for-whom">
-                    <h5>Who this is for</h5>
-                    <ul>
-                      <li>3rd, 4th, 5th year law students considering litigation</li>
-                      <li>Recent graduates joining a chamber or trial court practice</li>
-                      <li>Anyone who wants real courtroom muscle memory before their first brief</li>
-                    </ul>
-                  </div>
-                  <div className="testimonial">
-                    <p>"I mooted for three years. None of it prepared me for the silence when a real judge looked up. This programme would have saved me six months of confusion."</p>
-                    <cite><b>Junior Advocate, Delhi High Court</b> - Programme advisor</cite>
-                  </div>
-                  <div className="price-block">
-                    <div className="pl">Inaugural cohort pricing</div>
-                    <div className="price-tiers">
-                      <div className="price-tier student">
-                        <div className="tier-lbl"><span className="dot"></span>Students</div>
-                        <div className="tier-amt"><span className="r">₹</span>2,999</div>
-                        <div className="tier-strike">Standard ₹6,999</div>
-                      </div>
-                      <div className="price-tier pro">
-                        <div className="tier-lbl"><span className="dot"></span>Professionals</div>
-                        <div className="tier-amt"><span className="r">₹</span>4,999</div>
-                        <div className="tier-strike">Standard ₹6,999</div>
-                      </div>
-                    </div>
-                    <div className="pf">
-                      <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4 2 7-6.5-4.5L5.5 20l2-7L2 9h7z"/></svg>
-                      INAUGURAL COHORT - Limited-time pricing
-                    </div>
-                    <div className="pn">No payment now - Locked-in for waitlist members</div>
-                  </div>
-                  <div className="wl-info">
-                    <span className="wl-l"><span className="wl-dot"></span>Currently on waitlist</span>
-                    <span className="wl-n">{String((counts.litigation || 0) + (counts.bundle || 0)).padStart(2, '0')}</span>
-                  </div>
-                  <button className="course-cta-btn" onClick={() => handleCtaClick('litigation')}>
-                    Join the Litigation waitlist
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* COURSE 2 */}
-          <div className="course-block">
-            <div className="course-block-card">
-              <div className="course-hook">
-                <div className="course-numeral-big">II</div>
-                <div className="course-hook-text">
-                  <div className="fear-quote">
-                    <span className="fear-label">The unspoken thought</span>
-                    <span className="fear-text">What if my senior redlines every line of what I write?</span>
-                  </div>
-                  <h3>Drafting &amp; Conveyancing</h3>
-                  <div className="promise">Become the junior whose drafts go through almost untouched.</div>
-                </div>
-                <div className="course-meta-pills">
-                  <span className="pill dur">4 Weeks</span>
-                  <span className="pill live">Live Online</span>
-                  <span className="pill fmt">Workshop-led</span>
-                  <span className="pill hot">High ROI</span>
-                  <span className="pill start">Starts June 2026</span>
-                </div>
-              </div>
-              <div className="course-body-grid">
-                <div className="course-left">
-                  <div className="pitch-block">
-                    <p>Drafting is the single most billable, most teachable, most career-defining skill nobody actually teaches in law school. <strong>This is the programme that fixes that.</strong> In four weeks, you'll draft sale deeds, wills, NDAs, shareholder agreements, plaints, and written statements, then watch them get redlined by practitioners who do this work every day. By week four, your drafts will look like they came out of a chamber, not a classroom.</p>
-                  </div>
-                  <div className="outcomes-block">
-                    <div className="block-label">By the end, you'll be able to</div>
-                    <div className="outcomes">
-                      {[
-                        "Walk into any drafting brief with a structure already in your head",
-                        "Draft a clean sale deed, lease, or NDA in a sitting, not a week",
-                        "Spot the indemnity, jurisdiction, and dispute clauses that quietly decide who wins later",
-                        "Build a portfolio of your own work, ready to show in any chamber interview"
-                      ].map((text, i) => (
-                        <div className="outcome" key={i}>
-                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="m5 12 5 5L20 7" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                          <span><strong>{text.split(' ')[0] + ' ' + text.split(' ')[1] + ' ' + text.split(' ')[2] + ' ' + text.split(' ')[3]}</strong>{text.substring(text.split(' ')[0].length + text.split(' ')[1].length + text.split(' ')[2].length + text.split(' ')[3].length + 3)}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="curriculum-block">
-                    <div className="block-label">Four-week curriculum</div>
-                    <div className="curriculum-grid">
-                      <div>Foundations of precise legal writing</div>
-                      <div>Sale, lease, gift, mortgage deeds</div>
-                      <div>Wills, codicils, trust deeds</div>
-                      <div>Shareholder agreements &amp; NDAs</div>
-                      <div>Plaints, written statements, petitions</div>
-                      <div>Live redlining &amp; peer review</div>
-                    </div>
-                  </div>
-                </div>
-                <div className="course-right">
-                  <div className="for-whom">
-                    <h5>Who this is for</h5>
-                    <ul>
-                      <li>Students heading into transactional, corporate, or property practice</li>
-                      <li>Future litigators who want their pleadings to actually land</li>
-                      <li>Anyone interviewing at a firm where drafting is the entry test</li>
-                    </ul>
-                  </div>
-                  <div className="testimonial">
-                    <p>"In our firm we hire the junior who can draft, not the one with the best grades. Most law graduates can't. This is exactly the gap that needs closing."</p>
-                    <cite><b>Partner, Tier-1 Law Firm</b> - Programme advisor</cite>
-                  </div>
-                  <div className="price-block">
-                    <div className="pl">Inaugural cohort pricing</div>
-                    <div className="price-tiers">
-                      <div className="price-tier student">
-                        <div className="tier-lbl"><span className="dot"></span>Students</div>
-                        <div className="tier-amt"><span className="r">₹</span>2,499</div>
-                        <div className="tier-strike">Standard ₹5,499</div>
-                      </div>
-                      <div className="price-tier pro">
-                        <div className="tier-lbl"><span className="dot"></span>Professionals</div>
-                        <div className="tier-amt"><span className="r">₹</span>3,999</div>
-                        <div className="tier-strike">Standard ₹5,499</div>
-                      </div>
-                    </div>
-                    <div className="pf">
-                      <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4 2 7-6.5-4.5L5.5 20l2-7L2 9h7z"/></svg>
-                      INAUGURAL COHORT - Limited-time pricing
-                    </div>
-                    <div className="pn">No payment now - Locked-in for waitlist members</div>
-                  </div>
-                  <div className="wl-info">
-                    <span className="wl-l"><span className="wl-dot"></span>Currently on waitlist</span>
-                    <span className="wl-n">{String((counts.drafting || 0) + (counts.bundle || 0)).padStart(2, '0')}</span>
-                  </div>
-                  <button className="course-cta-btn" onClick={() => handleCtaClick('drafting')}>
-                    Join the Drafting waitlist
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* COURSE 3 */}
-          <div className="course-block">
-            <div className="course-block-card">
-              <div className="course-hook">
-                <div className="course-numeral-big">III</div>
                 <div className="course-hook-text">
                   <div className="fear-quote">
                     <span className="fear-label">The unspoken thought</span>
@@ -643,7 +440,7 @@ const App = () => {
                   <div className="promise">Stop memorising cases. Start wielding them.</div>
                 </div>
                 <div className="course-meta-pills">
-                  <span className="pill dur">2 Weeks</span>
+                  <span className="pill dur" style={{background:'var(--gold-2)', color:'black', fontWeight:'bold'}}>2 Weeks</span>
                   <span className="pill live">Live Online</span>
                   <span className="pill fmt">Analysis-heavy</span>
                   <span className="pill hot">Foundational</span>
@@ -706,7 +503,7 @@ const App = () => {
                       </div>
                       <div className="price-tier pro">
                         <div className="tier-lbl"><span className="dot"></span>Professionals</div>
-                        <div className="tier-amt"><span className="r">₹</span>1,799</div>
+                        <div className="tier-amt"><span className="r">₹</span>1,999</div>
                         <div className="tier-strike">Standard ₹2,499</div>
                       </div>
                     </div>
@@ -718,7 +515,7 @@ const App = () => {
                   </div>
                   <div className="wl-info">
                     <span className="wl-l"><span className="wl-dot"></span>Currently on waitlist</span>
-                    <span className="wl-n">{String((counts.judgment || 0) + (counts.bundle || 0)).padStart(2, '0')}</span>
+                    <span className="wl-n">100</span>
                   </div>
                   <button className="course-cta-btn" onClick={() => handleCtaClick('judgment')}>
                     Join the Judgment waitlist
@@ -728,10 +525,209 @@ const App = () => {
               </div>
             </div>
           </div>
+
+          {/* COURSE 2: Litigation Training */}
+          <div className="course-block">
+            <div className="course-block-card">
+              <div className="course-hook">
+                <div className="course-numeral-big">II</div>
+                <div className="course-hook-text">
+                  <div className="fear-quote">
+                    <span className="fear-label">The unspoken thought</span>
+                    <span className="fear-text">What if I freeze the moment it's my turn to speak?</span>
+                  </div>
+                  <h3>Litigation Training Programme</h3>
+                  <div className="promise">From facts on a desk to feet in a courtroom, in five weeks.</div>
+                </div>
+                <div className="course-meta-pills">
+                  <span className="pill dur" style={{background:'var(--gold-2)', color:'black', fontWeight:'bold'}}>5 Weeks</span>
+                  <span className="pill live">Live Online</span>
+                  <span className="pill hot">★ Flagship</span>
+                  <span className="pill start">Starts June 2026</span>
+                </div>
+              </div>
+              <div className="course-body-grid">
+                <div className="course-left">
+                  <div className="pitch-block">
+                    <p>This is the programme we wish we'd had before our first day in chambers. It walks you through the entire workflow of a litigating junior, the way a senior would actually teach you if they had the time. <strong>Five weeks. One real file. One end-to-end mock hearing.</strong> By the time you finish, the courtroom won't be a foreign country anymore. It'll be a place you've already worked in.</p>
+                  </div>
+                  <div className="outcomes-block">
+                    <div className="block-label">By the end, you'll be able to</div>
+                    <div className="outcomes">
+                      {[
+                        "Open a fresh case file and know exactly what goes where, without asking",
+                        "Find the binding precedent in 20 minutes, not three hours of textbook flipping",
+                        "Frame propositions of law a senior can read once and take into court",
+                        "Stand up and argue in front of a panel without your voice breaking on the first sentence"
+                      ].map((text, i) => (
+                        <div className="outcome" key={i}>
+                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="m5 12 5 5L20 7" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                          <span><strong>{text.split(' ')[0] + ' ' + text.split(' ')[1] + ' ' + text.split(' ')[2] + ' ' + text.split(' ')[3]}</strong>{text.substring(text.split(' ')[0].length + text.split(' ')[1].length + text.split(' ')[2].length + text.split(' ')[3].length + 3)}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="curriculum-block">
+                    <div className="block-label">Five-week curriculum</div>
+                    <div className="curriculum-grid">
+                      <div>Week 1: Research methodology &amp; precedent</div>
+                      <div>Week 2: File preparation &amp; case notes</div>
+                      <div>Week 3: Issue framing &amp; propositions</div>
+                      <div>Week 4: Drafting pleadings &amp; affidavits</div>
+                      <div>Week 5: Live practitioner session + mock hearing</div>
+                      <div>Capstone: End-to-end simulated case</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="course-right">
+                  <div className="for-whom">
+                    <h5>Who this is for</h5>
+                    <ul>
+                      <li>3rd, 4th, 5th year law students considering litigation</li>
+                      <li>Recent graduates joining a chamber or trial court practice</li>
+                      <li>Anyone who wants real courtroom muscle memory before their first brief</li>
+                    </ul>
+                  </div>
+                  <div className="testimonial">
+                    <p>"I mooted for three years. None of it prepared me for the silence when a real judge looked up. This programme would have saved me six months of confusion."</p>
+                    <cite><b>Junior Advocate, Delhi High Court</b> - Programme advisor</cite>
+                  </div>
+                  <div className="price-block">
+                    <div className="pl">Inaugural cohort pricing</div>
+                    <div className="price-tiers">
+                      <div className="price-tier student">
+                        <div className="tier-lbl"><span className="dot"></span>Students</div>
+                        <div className="tier-amt"><span className="r">₹</span>2,999</div>
+                        <div className="tier-strike">Standard ₹6,999</div>
+                      </div>
+                      <div className="price-tier pro">
+                        <div className="tier-lbl"><span className="dot"></span>Professionals</div>
+                        <div className="tier-amt"><span className="r">₹</span>3,999</div>
+                        <div className="tier-strike">Standard ₹6,999</div>
+                      </div>
+                    </div>
+                    <div className="pf">
+                      <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4 2 7-6.5-4.5L5.5 20l2-7L2 9h7z"/></svg>
+                      INAUGURAL COHORT - Limited-time pricing
+                    </div>
+                    <div className="pn">No payment now - Locked-in for waitlist members</div>
+                  </div>
+                  <div className="wl-info">
+                    <span className="wl-l"><span className="wl-dot"></span>Currently on waitlist</span>
+                    <span className="wl-n">100</span>
+                  </div>
+                  <button className="course-cta-btn" onClick={() => handleCtaClick('litigation')}>
+                    Join the Litigation waitlist
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* COURSE 3: Drafting & Conveyancing */}
+          <div className="course-block">
+            <div className="course-block-card">
+              <div className="course-hook">
+                <div className="course-numeral-big">III</div>
+                <div className="course-hook-text">
+                  <div className="fear-quote">
+                    <span className="fear-label">The unspoken thought</span>
+                    <span className="fear-text">What if my senior redlines every line of what I write?</span>
+                  </div>
+                  <h3>Drafting &amp; Conveyancing</h3>
+                  <div className="promise">Become the junior whose drafts go through almost untouched.</div>
+                </div>
+                <div className="course-meta-pills">
+                  <span className="pill dur" style={{background:'var(--gold-2)', color:'black', fontWeight:'bold'}}>4 Weeks</span>
+                  <span className="pill live">Live Online</span>
+                  <span className="pill fmt">Workshop-led</span>
+                  <span className="pill hot">High ROI</span>
+                  <span className="pill start">Starts June 2026</span>
+                </div>
+              </div>
+              <div className="course-body-grid">
+                <div className="course-left">
+                  <div className="pitch-block">
+                    <p>Drafting is the single most billable, most teachable, most career-defining skill nobody actually teaches in law school. <strong>This is the programme that fixes that.</strong> In four weeks, you'll draft sale deeds, wills, NDAs, shareholder agreements, plaints, and written statements, then watch them get redlined by practitioners who do this work every day. By week four, your drafts will look like they came out of a chamber, not a classroom.</p>
+                  </div>
+                  <div className="outcomes-block">
+                    <div className="block-label">By the end, you'll be able to</div>
+                    <div className="outcomes">
+                      {[
+                        "Walk into any drafting brief with a structure already in your head",
+                        "Draft a clean sale deed, lease, or NDA in a sitting, not a week",
+                        "Spot the indemnity, jurisdiction, and dispute clauses that quietly decide who wins later",
+                        "Build a portfolio of your own work, ready to show in any chamber interview"
+                      ].map((text, i) => (
+                        <div className="outcome" key={i}>
+                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="m5 12 5 5L20 7" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                          <span><strong>{text.split(' ')[0] + ' ' + text.split(' ')[1] + ' ' + text.split(' ')[2] + ' ' + text.split(' ')[3]}</strong>{text.substring(text.split(' ')[0].length + text.split(' ')[1].length + text.split(' ')[2].length + text.split(' ')[3].length + 3)}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="curriculum-block">
+                    <div className="block-label">Four-week curriculum</div>
+                    <div className="curriculum-grid">
+                      <div>Foundations of precise legal writing</div>
+                      <div>Sale, lease, gift, mortgage deeds</div>
+                      <div>Wills, codicils, trust deeds</div>
+                      <div>Shareholder agreements &amp; NDAs</div>
+                      <div>Plaints, written statements, petitions</div>
+                      <div>Live redlining &amp; peer review</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="course-right">
+                  <div className="for-whom">
+                    <h5>Who this is for</h5>
+                    <ul>
+                      <li>Students heading into transactional, corporate, or property practice</li>
+                      <li>Future litigators who want their pleadings to actually land</li>
+                      <li>Anyone interviewing at a firm where drafting is the entry test</li>
+                    </ul>
+                  </div>
+                  <div className="testimonial">
+                    <p>"In our firm we hire the junior who can draft, not the one with the best grades. Most law graduates can't. This is exactly the gap that needs closing."</p>
+                    <cite><b>Partner, Tier-1 Law Firm</b> - Programme advisor</cite>
+                  </div>
+                  <div className="price-block">
+                    <div className="pl">Inaugural cohort pricing</div>
+                    <div className="price-tiers">
+                      <div className="price-tier student">
+                        <div className="tier-lbl"><span className="dot"></span>Students</div>
+                        <div className="tier-amt"><span className="r">₹</span>1,499</div>
+                        <div className="tier-strike">Standard ₹5,499</div>
+                      </div>
+                      <div className="price-tier pro">
+                        <div className="tier-lbl"><span className="dot"></span>Professionals</div>
+                        <div className="tier-amt"><span className="r">₹</span>2,999</div>
+                        <div className="tier-strike">Standard ₹5,499</div>
+                      </div>
+                    </div>
+                    <div className="pf">
+                      <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4 2 7-6.5-4.5L5.5 20l2-7L2 9h7z"/></svg>
+                      INAUGURAL COHORT - Limited-time pricing
+                    </div>
+                    <div className="pn">No payment now - Locked-in for waitlist members</div>
+                  </div>
+                  <div className="wl-info">
+                    <span className="wl-l"><span className="wl-dot"></span>Currently on waitlist</span>
+                    <span className="wl-n">100</span>
+                  </div>
+                  <button className="course-cta-btn" onClick={() => handleCtaClick('drafting')}>
+                    Join the Drafting waitlist
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* BUNDLE */}
+      {/* BUNDLE: Complete Advocate Bundle */}
       <section className="bundle-section" id="bundle">
         <div className="wrap">
           <div className="bundle-card">
@@ -741,6 +737,10 @@ const App = () => {
                 The full transformation
               </span>
               <h3>The <em>Complete Advocate</em> Bundle</h3>
+              <div className="course-meta-pills" style={{marginBottom:'15px'}}>
+                <span className="pill dur" style={{background:'var(--gold-2)', color:'black', fontWeight:'bold', border:'none'}}>11 Weeks</span>
+                <span className="pill live">Comprehensive</span>
+              </div>
               <p>All three programmes. Eleven weeks. One transformation from "law student" to "the junior every chamber wants to hire." Capped at 25 students per bundle cohort because mentorship at this depth doesn't scale.</p>
               <div className="bundle-perks">
                 {[
@@ -770,10 +770,10 @@ const App = () => {
                 </div>
                 <div style={{textAlign:'right', paddingTop:'14px', borderTop:'1px solid rgba(255,255,255,.1)', width:'100%'}}>
                   <div style={{fontSize:'11px', fontFamily:'JetBrains Mono,monospace', letterSpacing:'.12em', textTransform:'uppercase', color:'#86efac', fontWeight:'600', marginBottom:'6px', display:'inline-flex', alignItems:'center', gap:'6px', justifyContent:'flex-end'}}><span style={{width:'5px', height:'5px', borderRadius:'50%', background:'#86efac'}}></span>Professionals</div>
-                  <div style={{fontFamily:'Instrument Serif,serif', fontStyle:'italic', fontSize:'48px', fontWeight:'400', lineHeight:'1', color:'white'}}><span style={{fontSize:'28px', verticalAlign:'super', color:'rgba(255,255,255,.6)', fontStyle:'normal'}}>₹</span>8,999</div>
+                  <div style={{fontFamily:'Instrument Serif,serif', fontStyle:'italic', fontSize:'48px', fontWeight:'400', lineHeight:'1', color:'white'}}><span style={{fontSize:'28px', verticalAlign:'super', color:'rgba(255,255,255,.6)', fontStyle:'normal'}}>₹</span>7,999</div>
                   <div className="bundle-was" style={{marginTop:'6px'}}>Standard ₹12,999</div>
                 </div>
-                <span className="bundle-save">Save up to ₹8,000</span>
+                <span className="bundle-save">Save over ₹5,000</span>
               </div>
             </div>
           </div>
@@ -784,10 +784,10 @@ const App = () => {
       <section className="counter">
         <div className="wrap counter-inner">
           <div className="counter-stats">
-            <div className="c-stat"><span className="c-num">{String(animatedCounts.total).padStart(2, '0')}</span><span className="c-lbl">Total on Waitlist</span></div>
-            <div className="c-stat"><span className="c-num">{String(animatedCounts.litigation).padStart(2, '0')}</span><span className="c-lbl">Litigation</span></div>
-            <div className="c-stat"><span className="c-num">{String(animatedCounts.drafting).padStart(2, '0')}</span><span className="c-lbl">Drafting</span></div>
-            <div className="c-stat"><span className="c-num">{String(animatedCounts.judgment).padStart(2, '0')}</span><span className="c-lbl">Judgment</span></div>
+            <div className="c-stat"><span className="c-num">100</span><span className="c-lbl">Total on Waitlist</span></div>
+            <div className="c-stat"><span className="c-num">100</span><span className="c-lbl">Litigation</span></div>
+            <div className="c-stat"><span className="c-num">100</span><span className="c-lbl">Drafting</span></div>
+            <div className="c-stat"><span className="c-num">100</span><span className="c-lbl">Judgment</span></div>
           </div>
           <div className="live-badge">
             <span style={{width:'6px', height:'6px', background:'#16a34a', borderRadius:'50%', animation:'breathe 2s infinite'}}></span>
@@ -836,14 +836,14 @@ const App = () => {
                     <label>
                       <input type="radio" name="userType" value="student" checked={userType === 'student'} onChange={() => setUserType('student')} />
                       <span className="ico">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 10 12 5 2 10l10 5 10-5z" strokeLinejoin="round"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5" strokeLinecap="round"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 10 12 5 2 10l10 5 10-5z" strokeLinejoin="round"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5" strokeLinecap="round"/></svg>
                       </span>
                       Law student
                     </label>
                     <label>
                       <input type="radio" name="userType" value="professional" checked={userType === 'professional'} onChange={() => setUserType('professional')} />
                       <span className="ico">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 7H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zM16 7V5c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2" strokeLinejoin="round"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 7H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zM16 7V5c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2" strokeLinejoin="round"/></svg>
                       </span>
                       Practising professional
                     </label>
@@ -859,15 +859,19 @@ const App = () => {
                   <label>Which programme(s) interest you? <span className="req">*</span></label>
                   <div className="picker">
                     {[
+                      { id: 'judgment', title: 'Judgment Appreciation', meta: '2 wk' },
                       { id: 'litigation', title: 'Litigation Training', meta: '5 wk' },
                       { id: 'drafting', title: 'Drafting & Conveyancing', meta: '4 wk' },
-                      { id: 'judgment', title: 'Judgment Appreciation', meta: '2 wk' },
                       { id: 'bundle', title: 'Complete Advocate Bundle', meta: '11 wk' }
                     ].map(course => (
                       <label key={course.id} className={`pick ${selectedCourses.includes(course.id) ? 'selected' : ''}`}>
-                        <input type="checkbox" name="courses" value={course.id} checked={selectedCourses.includes(course.id)} onChange={() => toggleCourse(course.id)} />
-                        <span className="pick-title">{course.title}</span>
-                        <span className="pick-meta">{course.meta} - {getCoursePrice(course.id, userType)}</span>
+                        <div className="pick-left">
+                          <input type="checkbox" name="courses" value={course.id} checked={selectedCourses.includes(course.id)} onChange={() => toggleCourse(course.id)} />
+                          <span className="pick-title">{course.title}</span>
+                        </div>
+                        <div className="pick-right">
+                          {course.meta} - {getCoursePrice(course.id, userType)}
+                        </div>
                       </label>
                     ))}
                   </div>
@@ -942,7 +946,7 @@ const App = () => {
             <div className="section-kicker">Common questions</div>
             <h2 className="section-title">The <em>honest</em> answers.</h2>
             <p style={{color:'var(--text-2)', fontSize:'15px', lineHeight:'1.6', maxWidth:'320px'}}>
-              If your question isn't here, reach us at <a href="mailto:admissions@legalolympiad.in" style={{color:'var(--accent)', textDecoration:'underline'}}>admissions@legalolympiad.in</a>
+              If your question isn't here, reach us at <a href="mailto:Connect@legalolympiad.com" style={{color:'var(--accent)', textDecoration:'underline'}}>Connect@legalolympiad.com</a>
             </p>
           </div>
 
@@ -974,20 +978,16 @@ const App = () => {
             <div>
               <div className="logo">
                 <div className="logo-mark">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 2 L22 7 V13 C22 17 17 21 12 22 C7 21 2 17 2 13 V7 Z" stroke="white" strokeWidth="2" fill="rgba(212,160,23,.15)"/>
-                    <path d="M8 12 L11 15 L16 10" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
+                  <img src="/logo1.png" alt="Legal Olympiad" style={{width:'100%', height:'100%', objectFit:'contain'}} />
                 </div>
-                Legal <b>Olympiad</b>
               </div>
               <p className="tag-line">Practitioner-led professional training for India's next generation of litigators. Inaugural cohort: June 2026.</p>
             </div>
             <div>
               <h5>Programmes</h5>
+              <a href="#courses">Judgment Appreciation</a>
               <a href="#courses">Litigation Training</a>
               <a href="#courses">Drafting &amp; Conveyancing</a>
-              <a href="#courses">Judgment Appreciation</a>
               <a href="#bundle">Complete Bundle</a>
             </div>
             <div>
@@ -1000,7 +1000,7 @@ const App = () => {
             <div>
               <h5>Contact</h5>
               <a href="#signup">Join Waitlist</a>
-              <a href="mailto:admissions@legalolympiad.in">admissions@legalolympiad.in</a>
+              <a href="mailto:Connect@legalolympiad.com">Connect@legalolympiad.com</a>
               <a href="/admin-portal" onClick={(e) => { 
                 e.preventDefault(); 
                 window.history.pushState({}, '', '/admin-portal');
