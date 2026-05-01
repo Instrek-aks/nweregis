@@ -762,16 +762,16 @@ const App = () => {
             </div>
             <div className="bundle-right">
               <div className="bundle-price-lbl">Inaugural cohort pricing</div>
-              <div style={{display:'flex', flexDirection:'column', gap:'18px', alignItems:'flex-end'}}>
-                <div style={{textAlign:'right'}}>
-                  <div style={{fontSize:'11px', fontFamily:'JetBrains Mono,monospace', letterSpacing:'.12em', textTransform:'uppercase', color:'var(--gold-3)', fontWeight:'600', marginBottom:'6px', display:'inline-flex', alignItems:'center', gap:'6px', justifyContent:'flex-end'}}><span style={{width:'5px', height:'5px', borderRadius:'50%', background:'var(--gold-3)'}}></span>Students</div>
+              <div className="bundle-price-wrap">
+                <div className="bundle-tier">
+                  <div className="bundle-tier-lbl student"><span className="dot"></span>Students</div>
                   <div className="bundle-now"><span className="r">₹</span>4,999</div>
                   <div className="bundle-was">Standard ₹12,999</div>
                 </div>
-                <div style={{textAlign:'right', paddingTop:'14px', borderTop:'1px solid rgba(255,255,255,.1)', width:'100%'}}>
-                  <div style={{fontSize:'11px', fontFamily:'JetBrains Mono,monospace', letterSpacing:'.12em', textTransform:'uppercase', color:'#86efac', fontWeight:'600', marginBottom:'6px', display:'inline-flex', alignItems:'center', gap:'6px', justifyContent:'flex-end'}}><span style={{width:'5px', height:'5px', borderRadius:'50%', background:'#86efac'}}></span>Professionals</div>
-                  <div style={{fontFamily:'Instrument Serif,serif', fontStyle:'italic', fontSize:'48px', fontWeight:'400', lineHeight:'1', color:'white'}}><span style={{fontSize:'28px', verticalAlign:'super', color:'rgba(255,255,255,.6)', fontStyle:'normal'}}>₹</span>7,999</div>
-                  <div className="bundle-was" style={{marginTop:'6px'}}>Standard ₹12,999</div>
+                <div className="bundle-tier pro-tier">
+                  <div className="bundle-tier-lbl pro"><span className="dot"></span>Professionals</div>
+                  <div className="bundle-price-large"><span className="r">₹</span>7,999</div>
+                  <div className="bundle-was">Standard ₹12,999</div>
                 </div>
                 <span className="bundle-save">Save over ₹5,000</span>
               </div>
