@@ -482,12 +482,24 @@ const App = () => {
                 </div>
                 <div className="course-right">
                   <div className="for-whom">
-                    <h5>Who this is for</h5>
-                    <ul>
-                      <li>Students preparing for judicial services or clerkships</li>
-                      <li>Future appellate lawyers and academics</li>
-                      <li>Anyone tired of memorising cases without truly understanding them</li>
-                    </ul>
+                    <h5>Judgement Appreciation</h5>
+                    <p style={{fontSize:'13.5px', color:'var(--text-2)', marginBottom:'16px', lineHeight:'1.5'}}>
+                      If you’ve ever read a judgment and felt you understood the outcome but not the reasoning, this course is for you.
+                    </p>
+                    <div style={{display:'flex', flexDirection:'column', gap:'12px'}}>
+                      <div>
+                        <div style={{fontWeight:'700', fontSize:'13.5px', color:'var(--ink)', marginBottom:'2px'}}>A. Law Students</div>
+                        <div style={{fontSize:'12.5px', color:'var(--text-3)', lineHeight:'1.4'}}>Who want to go beyond summaries and actually think like a judge—essential for exams, internships, and interviews.</div>
+                      </div>
+                      <div>
+                        <div style={{fontWeight:'700', fontSize:'13.5px', color:'var(--ink)', marginBottom:'2px'}}>B. Judicial Service Aspirants</div>
+                        <div style={{fontSize:'12.5px', color:'var(--text-3)', lineHeight:'1.4'}}>Where success depends not on memory, but on your ability to analyse, interpret, and apply judicial reasoning.</div>
+                      </div>
+                      <div>
+                        <div style={{fontWeight:'700', fontSize:'13.5px', color:'var(--ink)', marginBottom:'2px'}}>C. Young Lawyers</div>
+                        <div style={{fontSize:'12.5px', color:'var(--text-3)', lineHeight:'1.4'}}>Looking to strengthen courtroom arguments by understanding how courts actually arrive at conclusions.</div>
+                      </div>
+                    </div>
                   </div>
                   <div className="testimonial">
                     <p>"The candidates who stand out aren't the ones who quote the most cases. They're the ones who know exactly which sentence in the judgment binds. That's a teachable skill, and most law schools never teach it."</p>
@@ -515,7 +527,7 @@ const App = () => {
                   </div>
                   <div className="wl-info">
                     <span className="wl-l"><span className="wl-dot"></span>Currently on waitlist</span>
-                    <span className="wl-n">100</span>
+                    <span className="wl-n">35</span>
                   </div>
                   <button className="course-cta-btn" onClick={() => handleCtaClick('judgment')}>
                     Join the Judgment waitlist
@@ -614,7 +626,7 @@ const App = () => {
                   </div>
                   <div className="wl-info">
                     <span className="wl-l"><span className="wl-dot"></span>Currently on waitlist</span>
-                    <span className="wl-n">100</span>
+                    <span className="wl-n">31</span>
                   </div>
                   <button className="course-cta-btn" onClick={() => handleCtaClick('litigation')}>
                     Join the Litigation waitlist
@@ -714,7 +726,7 @@ const App = () => {
                   </div>
                   <div className="wl-info">
                     <span className="wl-l"><span className="wl-dot"></span>Currently on waitlist</span>
-                    <span className="wl-n">100</span>
+                    <span className="wl-n">12</span>
                   </div>
                   <button className="course-cta-btn" onClick={() => handleCtaClick('drafting')}>
                     Join the Drafting waitlist
@@ -784,10 +796,10 @@ const App = () => {
       <section className="counter">
         <div className="wrap counter-inner">
           <div className="counter-stats">
-            <div className="c-stat"><span className="c-num">100</span><span className="c-lbl">Total on Waitlist</span></div>
-            <div className="c-stat"><span className="c-num">100</span><span className="c-lbl">Litigation</span></div>
-            <div className="c-stat"><span className="c-num">100</span><span className="c-lbl">Drafting</span></div>
-            <div className="c-stat"><span className="c-num">100</span><span className="c-lbl">Judgment</span></div>
+            <div className="c-stat"><span className="c-num">23</span><span className="c-lbl">Total on Waitlist</span></div>
+            <div className="c-stat"><span className="c-num">31</span><span className="c-lbl">Litigation</span></div>
+            <div className="c-stat"><span className="c-num">12</span><span className="c-lbl">Drafting</span></div>
+            <div className="c-stat"><span className="c-num">35</span><span className="c-lbl">Judgment</span></div>
           </div>
           <div className="live-badge">
             <span style={{width:'6px', height:'6px', background:'#16a34a', borderRadius:'50%', animation:'breathe 2s infinite'}}></span>
