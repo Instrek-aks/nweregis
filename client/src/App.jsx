@@ -489,7 +489,7 @@ const App = () => {
                     <div style={{display:'flex', flexDirection:'column', gap:'12px'}}>
                       <div>
                         <div style={{fontWeight:'700', fontSize:'13.5px', color:'var(--ink)', marginBottom:'2px'}}>A. Law Students</div>
-                        <div style={{fontSize:'12.5px', color:'var(--text-3)', lineHeight:'1.4'}}>Who want to go beyond summaries and actually think like a judge—essential for exams, internships, and interviews.</div>
+                        <div style={{fontSize:'12.5px', color:'var(--text-3)', lineHeight:'1.4'}}>Who want to go beyond summaries and actually think like a judge-essential for exams, internships, and interviews.</div>
                       </div>
                       <div>
                         <div style={{fontWeight:'700', fontSize:'13.5px', color:'var(--ink)', marginBottom:'2px'}}>B. Judicial Service Aspirants</div>
